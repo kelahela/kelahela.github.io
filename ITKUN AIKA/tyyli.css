@@ -1,0 +1,99 @@
+/*ETUSIVU INDEX*/
+/*Taustakuva*/
+body {
+    background-image: url('tähtiä.jpg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+}
+/*Otsikko*/
+header {
+    display: flex;             /* Flexbox-käyttö */
+    justify-content: center;    /* Keskittää horisontaalisesti */
+    align-items: center;        /* Keskittää pystysuunnassa */
+    height: 100px;              /* Otsikkoalueen korkeus */
+    text-align: center;         /* Tekstin keskitys */
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px; /* tai 48px */
+    font-weight: bold;
+    color: #000000;
+}
+/*Laatikon rakennus*/
+.laatikko {
+    display:flexbox
+    width: 1000px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Varjo template-laatikolle */
+    border-radius: 10px; /* Pyöristetyt kulmat */
+    text-align: center;
+    justify-content: center;    /* Keskittää horisontaalisesti */
+    align-items: center;        /* Keskittää pystysuunnassa */
+    margin: 109px;
+    margin-top: 20px
+}
+
+/*Laatikon sisällön tyyli*/
+nav {
+    margin-bottom: 600px; /* Tilaa valikon alle */
+}
+
+nav a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Nappuloiden tyylit */
+.buttons {
+    display: flex;
+    justify-content: space-around; /* Nappulat tasataan sivuille */
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #45a049; /* Hover-efekti nappuloille */
+}
+
+
+
+
+/*Mobiiliversio joka tehty vain laatikon muotoilu*/
+@media (max-width: 600px) {
+    .laatikko {
+        width: 90%; /* Leveys pienenee mobiililaitteilla */
+        padding: 10px;
+        margin: 23px;
+        margin-top: 5px
+    }
+
+    nav a {
+        display: block; /* Linkit siirtyvät päällekkäin mobiililaitteilla */
+        margin: 10px 0; /* Tilaa linkkien väliin */
+    }
+
+    .buttons {
+        flex-direction: column; /* Nappulat allekkain mobiililaitteilla */
+    }
+
+    .buttons button {
+        width: 100%; /* Nappulat täyttävät koko leveysalueen */
+        margin-bottom: 10px; /* Tilaa nappuloiden väliin */
+    }
+}
