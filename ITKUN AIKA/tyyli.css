@@ -1,4 +1,5 @@
 /*ETUSIVU INDEX*/
+
 /*Taustakuva*/
 body {
     background-image: url('tähtiä.jpg'); 
@@ -18,40 +19,95 @@ header {
     top: 0;
     width: 100%;
 }
-h1 {
+
+h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 36px; /* tai 48px */
     font-weight: bold;
-    color: #000000;
+    color: #000000  
 }
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; /* tai 18px */
+    color: #ad0c0c;
+}
+
 /*Laatikon rakennus*/
 .laatikko {
-    display:flexbox
+    display: flexbox;
+    justify-content: space-around;
     width: 1000px;
     padding: 20px;
     background-color: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Varjo template-laatikolle */
-    border-radius: 10px; /* Pyöristetyt kulmat */
-    text-align: center;
-    justify-content: center;    /* Keskittää horisontaalisesti */
-    align-items: center;        /* Keskittää pystysuunnassa */
-    margin: 109px;
-    margin-top: 20px
+    border-radius:10px; /* Pyöristetyt kulmat */
+    margin:109px;
+    margin-top:20px;
+    text-align:center;
 }
 
 /*Laatikon sisällön tyyli*/
 nav {
-    margin-bottom: 600px; /* Tilaa valikon alle */
+    margin-bottom: 10px; /* Tilaa valikon alle */
 }
+
+.Galleria {
+    display: flexbox;
+    border-radius:10px;
+    flex-direction: row;
+    background-color: #57cd36;
+    padding: 5px;
+    width: 200px;
+}
+
+.Genret {
+    display: flexbox;
+    border-radius:10px;
+    flex-direction: row;
+    background-color: #cd3636;
+    padding: 5px;
+    width: 200px;
+}
+.Viikonitkut {
+    display: flexbox;
+    border-radius:10px;
+    float: right;
+    background-color: #36cd9d;
+    padding: 5px;
+    width: 150px;
+}
+.Musiikkia {
+    flex-direction: row;
+    display: flexbox;
+    border-radius:10px;
+    background-color: #d6ff85;
+    padding: 5px;
+    width: 170px;
+    
+
+
+¨
+/* Nappuloiden tyylit */
+.myButton {
+    background-color: #4CAF50; /* Vihreä taustaväri */
+    border: none;              /* Ei reunaviivoja */
+    color: white;              /* Valkoinen teksti */
+    padding: 15px 32px;        /* Sisennykset nappulalle */
+    text-align: center;        /* Tekstin keskitys */
+    text-decoration: none;     /* Ei alleviivausta tekstille */
+    display: inline-block;     /* Nappula näytetään rivillä */
+    font-size: 16px;           /* Tekstin koko */
+    margin: 4px 2px;           /* Vähän tilaa nappulan ympärillä */
+    cursor: pointer;           /* Hiiren osoitin muuttuu kädeksi */
+    border-radius: 8px;        /* Pyöristetyt reunat */
 
 nav a {
     text-decoration: none;
-    color: #4CAF50;
+    color: #173b7c;
     font-weight: bold;
     margin: 0 10px;
 }
 
-/* Nappuloiden tyylit */
 .buttons {
     display: flex;
     justify-content: space-around; /* Nappulat tasataan sivuille */
@@ -77,10 +133,10 @@ nav a {
 /*Mobiiliversio joka tehty vain laatikon muotoilu*/
 @media (max-width: 600px) {
     .laatikko {
-        width: 90%; /* Leveys pienenee mobiililaitteilla */
+        width: 30%; /* Leveys pienenee mobiililaitteilla */
         padding: 10px;
-        margin: 23px;
-        margin-top: 5px
+        margin: 100;
+        margin-top: 5px;
     }
 
     nav a {
@@ -96,4 +152,3 @@ nav a {
         width: 100%; /* Nappulat täyttävät koko leveysalueen */
         margin-bottom: 10px; /* Tilaa nappuloiden väliin */
     }
-}
