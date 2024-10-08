@@ -13,78 +13,163 @@ header {
     display: flex;             /* Flexbox-käyttö */
     justify-content: center;    /* Keskittää horisontaalisesti */
     align-items: center;        /* Keskittää pystysuunnassa */
-    height: 100px;              /* Otsikkoalueen korkeus */
+    height: 200px;              /* Otsikkoalueen korkeus */
     text-align: center;         /* Tekstin keskitys */
     position: relative;
     top: 0;
     width: 100%;
 }
 
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px; /* tai 48px */
+h1 a {
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 66px; 
     font-weight: bold;
-    color: #000000  
+    color: rgb(220, 234, 247);  
+    text-decoration: none; 
+}
+
+h2 {
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(220, 234, 247);  
+    text-decoration: none; 
+}
+
+h2 a {
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(220, 234, 247);  
+    text-decoration: none; 
+}
+
+h3 {
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 16px; 
+    color: rgb(0, 0, 0);  
+    text-decoration: none; 
+}
+
+.pohja {
+    text-align: center; 
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 20px; 
+    font-weight: bold;
+    color: rgb(220, 234, 247);  
+    text-decoration: none; 
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
     font-size: 16px; /* tai 18px */
-    color: #ad0c0c;
+    color: rgb(220, 234, 247);
 }
 
 /*Laatikon rakennus*/
 .laatikko {
-    display: flexbox;
-    justify-content: space-around;
+    display: grid;
     width: 1000px;
+    height: auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(209, 209, 209);
     border-radius:10px; /* Pyöristetyt kulmat */
     margin:109px;
-    margin-top:20px;
+    margin-top:10px;
     text-align:center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'ylärivi ylärivi ylärivi'
+    'vasen keskiylös oikea'
+    'vasen keskiylös oikea'
+    'vasen keskialas oikea'
+    'vasen keskialas oikea';
+    margin-bottom: 50px;
+    
 }
 
-/*Laatikon sisällön tyyli*/
-nav {
-    margin-bottom: 10px; /* Tilaa valikon alle */
+.alku{
+    row-gap: 0px;
+    border-radius:10px;
+    background-color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
 }
 
 .Galleria {
-    display: flexbox;
     border-radius:10px;
-    flex-direction: row;
-    background-color: #57cd36;
-    padding: 5px;
-    width: 200px;
+    background-color: rgb(73, 86, 54);
+    padding: 2px;
+    width: 84%;
+    margin-left: 25px;
+    height: 200px;
 }
 
 .Genret {
-    display: flexbox;
     border-radius:10px;
-    flex-direction: row;
-    background-color: #cd3636;
-    padding: 5px;
-    width: 200px;
+    background-color: rgb(73, 86, 54);
+    padding: 2px;
+    width: 84%;
+    margin-left: 25px;
 }
-.Viikonitkut {
-    display: flexbox;
+
+.Surukokoelmat {
     border-radius:10px;
-    float: right;
-    background-color: #36cd9d;
-    padding: 5px;
-    width: 150px;
+    background-color: rgb(73, 86, 54);
+    padding: 2px;
+    width: 84%;
+    margin-left: 25px;
+    margin-bottom: 20px;
 }
 .Musiikkia {
-    flex-direction: row;
-    display: flexbox;
     border-radius:10px;
-    background-color: #d6ff85;
-    padding: 5px;
-    width: 170px;
-    
+    background-color: rgb(73, 86, 54);
+    padding: 2px;
+    width: 84%;
+    margin-left: 25px;
+}
 
+.Mielenterveys {
+    display: grid;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    color: rgb(220, 234, 247);
+    border-radius:10px;
+    background-color: rgb(73, 86, 54);
+    padding: 15px;
+    width: 550px;
+    row-gap: 55px;
+    margin-bottom: 10px;
+    margin-left: 21%;
+}
+
+.täytä a{
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    color: rgb(220, 234, 247);
+    text-decoration: none;
+    display: block; /* Asettaa linkit omille riveilleen */
+    line-height: 2; /* Kasvattaa rivikorkeuden kaksinkertaiseksi */
+    border-bottom: 2px solid black; /* Lisää viivan vain alareunaan */
+}
+
+.viikonitku a{
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
+    color: rgb(220, 234, 247);
+    display: block; /* Asettaa linkit omille riveilleen */
+    line-height: 2;
+    border-bottom: 2px solid black; /* Lisää viivan vain alareunaan */
+}
+
+.Galleria {grid-area: keskialas;}
+.Genret {grid-area: vasen;}
+.alku {grid-area: ylärivi;}
+.Surukokoelmat{grid-area: keskiylös;}
+.Musiikkia {grid-area: oikea;}
 
 ¨
 /* Nappuloiden tyylit */
@@ -103,7 +188,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #173b7c;
+    color: #606265;
     font-weight: bold;
     margin: 0 10px;
 }
@@ -152,3 +237,5 @@ nav a {
         width: 100%; /* Nappulat täyttävät koko leveysalueen */
         margin-bottom: 10px; /* Tilaa nappuloiden väliin */
     }
+
+}
