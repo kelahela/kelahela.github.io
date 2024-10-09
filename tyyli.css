@@ -28,6 +28,7 @@ h1 a {
     text-decoration: none; 
 }
 
+/*Tämä pitää olla tummaa väriä vasten*/
 h2 {
     font-family: 'Angsana New', 'Aptos Serif', Arial;
     font-size: 20px; 
@@ -52,23 +53,12 @@ h3 {
 }
 
 h4 {font-family: 'Angsana New', 'Aptos Serif', Arial;
-    font-size: 20px; 
+    font-size: 24px; 
     color: rgb(0, 0, 0);  
-    text-decoration: none;}
-
-.pohja a { 
-    font-family: 'Angsana New', 'Aptos Serif', Arial;
-    font-size: 20px; 
-    font-weight: bold;
-    color: rgb(220, 234, 247);  
-    text-decoration: none; 
-    border-radius:10px;
-    background-color: rgb(73, 86, 54);
-    padding: 2px;
-    width: 200px;
-    height: 10px;
+    text-decoration: none;
 }
-
+  
+    
 p {
     font-family: 'Angsana New', 'Aptos Serif', Arial;
     font-size: 16px; 
@@ -109,7 +99,7 @@ p {
 .laatikko2 {
     display: grid;
     width: 1000px;
-    height: auto;
+    height: 1000;
     padding: 20px;
     background-color: rgb(209, 209, 209);
     border-radius:10px; /* Pyöristetyt kulmat */
@@ -117,12 +107,15 @@ p {
     margin-top:10px;
     text-align:center;
     grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 saraketta */
+    gap: 20px;
     grid-template-areas: 
-    'x x x'
-    'kaksi otsikko vihreä'
+    'valko valko valko'
     'story story vihreä'
     'story story vihreä'
     'story story vihreä'
+    'story story kaksi'
     'yksi kolme neljä';
     margin-bottom: 50px;
 }
@@ -131,9 +124,10 @@ p {
 .kuva1{grid-area: yksi;}
 .kuva2 {grid-area: kaksi;}¨
 .kuva3{grid-area: kolme;}
-.kuva4{grid-area: neljä} 
+.kuva4{grid-area: neljä;} 
+.alku2{grid-area: valko;}
 
-
+/*indexin alkusivu*/
 .alku{
     row-gap: 0px;
     border-radius:10px;
@@ -144,6 +138,40 @@ p {
     width: 100%;
     margin-bottom: 10px;
     height: auto;
+}
+
+.alku2{
+    row-gap: 0px;
+    border-radius:10px;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border-radius:10px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+}
+
+.kuva1{
+    padding: 2px;
+    width: 84%;
+    margin-right: 70%;
+
+}
+
+.kuva2{
+   padding: 2px;
+   width: 100%: 
+}
+
+.kuva3{
+    padding: 2px;
+    width: 84%;
+}
+
+.kuva4{
+    padding: 2px;
+    width: 84%;
 }
 
 .Galleria {
@@ -185,6 +213,7 @@ p {
     padding: 2px;
     width: 84%;
     margin-left: 25px;
+    margin-top: -15px;
 }
 
 .Mielenterveys {
@@ -236,15 +265,12 @@ p {
 }
 
 
-.viikonaloitus {
-    color: rgb(0, 1, 0);
-    margin: 0 10px;
-}
-
 .tarina {
-    color:  rgb(73, 86, 54);
+    color:  rgb(0, 0, 0);
     font-family:'Angsana New', 'Aptos Serif', Arial;
     font-size: 16px;
+    margin-top: -60px;
+    line-height: 1.6;
 }
 
 .korostus {
@@ -405,4 +431,24 @@ p {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+}
+/* Perustyyli, jota käytetään kaikilla laitteilla */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Mukautus mobiililaitteille (näytön leveys alle 768px) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Muutetaan layout yhdeksi sarakkeeksi pienillä näytöillä */
+    }
+}
+
+/* Mukautus erittäin suurille näytöille (näytön leveys yli 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr; /* Kolme saraketta suurilla näytöillä */
+    }
 }
