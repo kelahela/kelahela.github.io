@@ -51,6 +51,11 @@ h3 {
     text-decoration: none; 
 }
 
+h4 {font-family: 'Angsana New', 'Aptos Serif', Arial;
+    font-size: 20px; 
+    color: rgb(0, 0, 0);  
+    text-decoration: none;}
+
 .pohja a { 
     font-family: 'Angsana New', 'Aptos Serif', Arial;
     font-size: 20px; 
@@ -66,7 +71,7 @@ h3 {
 
 p {
     font-family: 'Angsana New', 'Aptos Serif', Arial;
-    font-size: 16px; /* tai 18px */
+    font-size: 16px; 
     color: rgb(220, 234, 247);
 }
 
@@ -82,6 +87,9 @@ p {
     margin-top:10px;
     text-align:center;
     grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 saraketta */
+    gap: 20px;
     grid-template-areas: 
     'ylärivi ylärivi ylärivi'
     'vasen keskiylös oikea'
@@ -89,13 +97,47 @@ p {
     'vasen keskialas oikea'
     'vasen keskialas oikea';
     margin-bottom: 50px;
-    
 }
+
+.Galleria {grid-area: keskialas;}
+.Genret {grid-area: vasen;}
+.alku {grid-area: ylärivi;}
+.Surukokoelmat{grid-area: keskiylös;}
+.Musiikkia {grid-area: oikea;}
+
+
+.laatikko2 {
+    display: grid;
+    width: 1000px;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(209, 209, 209);
+    border-radius:10px; /* Pyöristetyt kulmat */
+    margin:109px;
+    margin-top:10px;
+    text-align:center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'x x x'
+    'kaksi otsikko vihreä'
+    'story story vihreä'
+    'story story vihreä'
+    'story story vihreä'
+    'yksi kolme neljä';
+    margin-bottom: 50px;
+}
+.Musiikkia2{grid-area:vihreä}
+.tarina{grid-area: story}
+.kuva1{grid-area: yksi;}
+.kuva2 {grid-area: kaksi;}¨
+.kuva3{grid-area: kolme;}
+.kuva4{grid-area: neljä} 
+
 
 .alku{
     row-gap: 0px;
     border-radius:10px;
-    background-color: rgb(209, 209, 209);
+    background-color: transparent;
     color: rgb(0, 0, 0);
     border-radius:10px;
     padding: 5px;
@@ -137,6 +179,14 @@ p {
     margin-left: 25px;
 }
 
+.Musiikkia2 {
+    border-radius:10px;
+    background-color: rgb(73, 86, 54);
+    padding: 2px;
+    width: 84%;
+    margin-left: 25px;
+}
+
 .Mielenterveys {
     display: grid;
     text-decoration: none;
@@ -152,25 +202,207 @@ p {
     margin-left: 21%;
 }
 
+
+.Mielenterveys:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/*Kaikki, missä ei ole toimiva linkki*/
 .täytä a{
     font-family: 'Angsana New', 'Aptos Serif', Arial;
     color: rgb(220, 234, 247);
     text-decoration: none;
     display: block; /* Asettaa linkit omille riveilleen */
     line-height: 2; /* Kasvattaa rivikorkeuden kaksinkertaiseksi */
-    border-bottom: 2px solid black; /* Lisää viivan vain alareunaan */
+    border-top: 2px solid black; /* Lisää viivan vain alareunaan */
 }
 
-.viikonitku a{
+/*Muuttuu kun hiiri päällä*/
+.täytä a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/*aka. footer*/
+.alatunniste {
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+
+.viikonaloitus {
+    color: rgb(0, 1, 0);
+    margin: 0 10px;
+}
+
+.tarina {
+    color:  rgb(73, 86, 54);
+    font-family:'Angsana New', 'Aptos Serif', Arial;
+    font-size: 16px;
+}
+
+.korostus {
+    background-color: rgb(73, 86, 54);   /* Taustaväri */
+    color: rgb(220, 234, 247); /* Tekstin väri */
+   font-weight: bold; /* Lihavointi */
+}
+/*Some-nappulat*/
+.footer-button {
+    color:  rgb(73, 86, 54);
+    font-size: 30px;
+    margin: 0 10px;
+    border-radius:10px;
+    background-color: rgb(209, 209, 209);
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/*i niinkuin iconi*/
+.footer-button i {
+    position: relative;
+    z-index: 10;
+}
+
+.footer-button:hover {
+    color: white;
+}
+
+.footer-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.footer-button:hover::before {
+    opacity: 1;
+}
+
+.email-link {
+    color: rgb(220, 234, 247);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.email-link i {
+    position: relative;
+    z-index: 10;
+}
+
+.email-link:hover {
+    color: rgb(0, 0, 0);
+}
+
+.email-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 35px;
+    background-color:rgb(73, 86, 54);
+    border-radius: 8px;
+    z-index: -1;
+}
+
+.email-link:hover::before {
+    opacity: 5;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: rgb(220, 234, 247);
+}
+
+.toimivalinkki a{
     font-family: 'Angsana New', 'Aptos Serif', Arial;
     color: rgb(220, 234, 247);
     display: block; /* Asettaa linkit omille riveilleen */
     line-height: 2;
-    border-bottom: 2px solid black; /* Lisää viivan vain alareunaan */
+    border-top: 2px solid black; /* Lisää viivan vain alareunaan */
+    cursor: pointer;
 }
 
-.Galleria {grid-area: keskialas;}
-.Genret {grid-area: vasen;}
-.alku {grid-area: ylärivi;}
-.Surukokoelmat{grid-area: keskiylös;}
-.Musiikkia {grid-area: oikea;}
+.toimivalinkki a:hover {
+    color: rgb(0, 0, 0);
+}
+
+
+/*Navigaatiopalkin tyyli:*/
+.päävalikko {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0px;
+    gap: 30px;
+}
+
+/* Navigointipainikkeen tyyli */
+.valikkonappi {
+    background-color: rgb(73, 86, 54);
+    color: rgb(220, 234, 247);
+    font-size: 18px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 50px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Active-tila: Kun sivu on käytössä */
+.valikkonappi.aktiivinen {
+    background-color: #9db885;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+}
+
+/* Active-tila: Kun painiketta painetaan */
+.valikkonappi:active {
+    background-color: #8D9D5C;
+    transform: translateY(2px);
+}
+
+/* Hover-tila: Kun hiiri on painikkeen päällä */
+.valikkonappi:hover {
+    background-color: rgb(46, 51, 38);
+    color: rgb(220, 234, 247);
+    
+}
+/* Painikkeet */
+.button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
