@@ -6,7 +6,7 @@ body {
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
-    font-family: Arial, sans-serif;
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
 }
 /*Otsikko*/
 header {
@@ -99,7 +99,7 @@ p {
 .laatikko2 {
     display: grid;
     width: 1000px;
-    height: 1000;
+    height: 2000;
     padding: 20px;
     background-color: rgb(209, 209, 209);
     border-radius:10px; /* Pyöristetyt kulmat */
@@ -161,21 +161,24 @@ p {
 
 .kuva2{
    padding: 2px;
-   width: 100%: 
+:  
 }
 
 .kuva3{
     padding: 2px;
-    width: 84%;
 }
 
 .kuva4{
     padding: 2px;
-    width: 84%;
+}
+
+.kuvakuu{
+    margin-left: 4;
+    margin-bottom: 15;
 }
 
 .Galleria {
-    border-radius:10px;
+    border-radius:5px;
     background-color: rgb(73, 86, 54);
     padding: 2px;
     width: 84%;
@@ -423,7 +426,7 @@ p {
 }
 /* Painikkeet */
 .button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Angsana New', 'Aptos Serif', Arial;
     font-size: 14px;
     color: #000000;
     background-color: #4CAF50;
@@ -433,22 +436,10 @@ p {
     cursor: pointer;
 }
 /* Perustyyli, jota käytetään kaikilla laitteilla */
-.container {
+.laatikko .laatikko2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-/* Mukautus mobiililaitteille (näytön leveys alle 768px) */
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr; /* Muutetaan layout yhdeksi sarakkeeksi pienillä näytöillä */
-    }
-}
 
-/* Mukautus erittäin suurille näytöille (näytön leveys yli 1200px) */
-@media (min-width: 1200px) {
-    .container {
-        grid-template-columns: 1fr 1fr 1fr; /* Kolme saraketta suurilla näytöillä */
-    }
-}
