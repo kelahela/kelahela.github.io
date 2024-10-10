@@ -438,3 +438,243 @@ nav a {
                         <button class="valikkonappi">
                             <a href="Yhteystiedot.html">Yhteystiedot</a></button>
                     </div>
+
+
+
+
+
+NONNI SAISKOHAN TÄLLÄ SEN MUODON OIKEINNN
+/*mobiilikoko*/
+
+@media (max-width: 600px) {
+    #etusivu {
+        background-image: url(pienimustavalkomuseo.jpg);
+        background-size: cover;
+        height: 400px;
+    }
+    #alisivut {
+        background-image: url(pienimustavalkomuseo.jpg);
+    }
+
+    .päävalikko a { 
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+        padding: 7px;
+        margin:3px 5px;
+    }
+    h1 a {
+        font-size: 30px;
+        padding: 20px;
+    }
+
+    .toimintakehote {
+        font-size: 18px;
+    }
+    .alku {
+        margin: 3% 10% 3% 10%;
+    }
+    .alisivu-sisalto {
+        margin: 3% 10% 3% 10%;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 25px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .esittely {
+        font-size: 18px;  
+    }
+    .laatikko {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #kahvimme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #musamme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    .grid-yritys {
+        grid-template-areas:
+            'g1-h1'
+            'g2-hk1'
+            'g3-h2'
+            'g4-hk2';
+    }
+    .alatunniste{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*tablettikoko*/
+@media screen and (min-width: 600px) {
+    #etusivu {
+        background-image: url(kuvat/paakuva-kahvila.jpg);
+        background-size: cover;
+        height: 600px;
+    }
+    #alisivut {
+        background-image: url(kuvat/tausta-mobiili.jpg);
+    }
+    nav a { 
+        font-size: 15px;
+        width: 100px;
+        height: 20px;
+        padding: 7px;
+        margin:3px 5px;
+    }
+    .header {
+        font-size: 40px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .toimintakehote {
+        font-size: 20px;
+    }
+    .sisalto {
+        margin: 3% 10% 3% 10%;
+    }
+    .alisivu-sisalto {
+        margin: 3% 10% 3% 10%;
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2{
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    .esittely {
+        font-size: 20px;  
+    }
+    .laatikko {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #kahvimme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    #musamme {
+        grid-template-areas:
+            'g1'
+            'g3'
+            'g2';
+    }
+    .grid-yritys {
+        grid-template-areas:
+            'g1-h1'
+            'g2-hk1'
+            'g3-h2'
+            'g4-hk2';
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/*suuri näyttö*/
+@media screen and (min-width: 1200px) {
+    #etusivu {
+        background-image: url(kuvat/paakuva-kahvila.jpg);
+        background-size: cover;
+        height: 950px;
+    }
+    #alisivut {
+        background-image: url(kuvat/tausta.jpg);
+    }
+    nav a { 
+        font-size: 20px;
+        width: 130px;
+        height: 25px;
+        padding: 10px;
+        margin:5px 20px;
+    }
+    
+    .header {
+        font-size: 65px;
+        padding-top: 150px;
+        padding-bottom: 20px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .toimintakehote {
+        font-size: 30px;
+    }
+    .sisalto {
+        margin: 3% 15% 3% 15%;
+    }
+    .alisivu-sisalto {
+        margin: 3% 15% 3% 15%;
+        flex-direction: row;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 25px;
+    }
+    .esittely {
+        font-size: 25px;  
+    }
+
+    .laatikko {
+        grid-template-areas:
+            'g1 g1 g3'
+            'g2 g2 g3';
+        margin-bottom: 100px;
+    }
+    #kahvimme {
+        grid-template-areas:
+            'g3 g1 g1'
+            'g3 g2 g2';
+        margin-bottom: 50px;
+    }
+    #musamme {
+        grid-template-areas:
+            'g1 g3 g2';
+        margin-bottom: 50px;
+    }
+    .grid-yritys {
+        grid-template-areas:
+            'g1-h1 g1-h1 g2-hk1'
+            'g4-hk2 g3-h2 g3-h2';
+        margin-bottom: 50px;
+    }
+    footer{
+        flex-direction: row;
+        text-align: left;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        max-height: 15%;
+    }
+}
